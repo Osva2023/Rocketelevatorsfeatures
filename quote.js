@@ -206,6 +206,21 @@ function allBuildingFieldsCompleted(buildingType) {
     }
     return true;
 }
+// function setcolorResidential(){
+//     buildingInfo.style.backgroundColor = "rgba(10, 101, 160,0.6";
+//     productLineInfo.style.backgroundColor = "rgba(10, 101, 160,0.6";
+//     pricingblock.style.backgroundColor = "rgba(10, 101, 160,0.6";
+// }
+// function setcolorCommercial(){
+//     buildingInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)";
+//     productLineInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)";
+//     pricingblock.style.backgroundColor = "rgba(169, 69, 69, 0.7)";
+// }
+// function setcolorIndustrial(){
+//     buildingInfo.style.backgroundColor = "rgba(211, 211, 211, 0.5)";
+//     productLineInfo.style.backgroundColor = "rgba(211, 211, 211, 0.5)";
+//     pricingblock.style.backgroundColor = "rgba(211, 211, 211, 0.5)";
+// }
 
 radioBtns_div.querySelectorAll("input[type='radio']").forEach((radioBtn) => {
     radioBtn.addEventListener("click", updatePricingDisplay);
@@ -223,6 +238,7 @@ buildingType_select.addEventListener("change", function () {
         
         if (buildingType == "residential") {
         displayBuildingFields(buildingType);
+        
         productLineInfo.style.backgroundColor = "rgba(10, 101, 160,0.6"; /// linea color prueba
         pricingblock.style.backgroundColor = "rgba(10, 101, 160, 0.6)"; /// linea color prueba
         buildingInfo.style.backgroundColor = "rgba(10, 101, 160, 0.6)"; /// linea color prueba
@@ -251,9 +267,9 @@ buildingType_select.addEventListener("change", function () {
         }
         else if (buildingType == "industrial") {
             
-            productLineInfo.style.backgroundColor = ""; /// linea color prueba
-            pricingblock.style.backgroundColor = ""; /// linea color prueba
-            buildingInfo.style.backgroundColor = ""; /// linea color prueba
+            productLineInfo.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; /// linea color prueba
+            pricingblock.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; /// linea color prueba
+            buildingInfo.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; /// linea color prueba
             displayBuildingFields(buildingType);
             estimateNumElv_div.addEventListener("change", function () {
                 if (!allBuildingFieldsCompleted(buildingType)) {
