@@ -13,7 +13,7 @@
 
 		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/r.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
 		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
 
 		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
@@ -21,6 +21,9 @@
 
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital@1&family=Roboto+Serif:opsz@8..144&family=Roboto+Slab&display=swap" rel="stylesheet">   
 	</head>
 
 	<body class="smoothscroll enable-animation">
@@ -308,7 +311,10 @@
 				<div class="overlay dark-7"></div>
 				<div class="container">
 					<div class="text-center">
-						<h2 class="fs-40 fw-300"><strong>Elevating Innovation, Safety, & Style since 1976</strong></h2>
+						<h2 class="fs-40 fw-300"><strong>Elevating Innovation, Safety, & Style since
+							<span style="color: #A94545; font-weight: bold; font-size: 1.2em;">1976</span>
+						</strong>
+					    </h2>
 						<a class="btn btn-outline-primary btn-lg" href="quote.html">REQUEST QUOTE <i class="fa fa-angle-right"></i></a> 
 						&nbsp; OR &nbsp; 
 						<a class="btn btn-outline-danger btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
@@ -793,7 +799,7 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label for="company_name">Company Name</label>
-                                            <input id="name"  type="text" value="" class="form-control" name="contact[name]">
+                                            <input id="company_name"  type="text" value="" class="form-control" name="contact[name]">
                                         </div>
                                         <div class="col-md-6">
                                             <label for="project_name">Project Name</label>
@@ -865,7 +871,7 @@
 										<li>Wednesday: 9:00 - 17:00</li>
 										<li>Thursday: 9:00 - 17:00</li>
 										<li>Friday: 9:00 - 17:00</li>
-										<li>Saturday: 12:00 - 17:00</li>
+										<li class="special-day">Saturday: 12:00 - 17:00</li>
 									</ul>
 								</span>
 							</p>
