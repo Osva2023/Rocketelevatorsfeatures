@@ -68,6 +68,11 @@ const installPercentFees = {
     premium: 15,
     excelium: 20,
 };
+// new variable for object STEP 1 block building information
+//let buildingtab = document.querySelector(".card-title h3"); // add element to get the tabs step 1 BIEN SELECCIONADO
+let buildingInfo = document.getElementById("buildingInfo");  // nada seleccionado
+let productLineInfo = document.getElementById("product-line"); // add element to get the tabs step 3 BIEN SELECCIONADO
+let pricingblock = document.getElementById('pricing-block');
 
 // CALCULATIONS
 function calcResidentialElev(numFloors, numApts) {
@@ -114,6 +119,7 @@ function resetForm() {
 }
 
 function displayBuildingFields(buildingType) {
+    
     estimateNumElv_div.style.display = "block";
     estimateNumElv_div.querySelector(".step-description").style.display =
         "block";
@@ -128,6 +134,7 @@ function displayBuildingFields(buildingType) {
     }
     productLineSelection_div.style.display = "block";
     finalPricingDisplay_div.style.display = "block";
+    
 }
 
 function displayElvCalcResult(buildingType) {
@@ -206,11 +213,19 @@ radioBtns_div.querySelectorAll("input[type='radio']").forEach((radioBtn) => {
 
 buildingType_select.addEventListener("change", function () {
     resetForm();
+    
     buildingType = this.value;
+    
     if (buildingType == "---Select---") {
         resetForm();
-    } else {
+    } 
+    else {
+        
+        if (buildingType == "residential") {
         displayBuildingFields(buildingType);
+        productLineInfo.style.backgroundColor = "rgba(10, 101, 160,0.6"; /// linea color prueba
+        pricingblock.style.backgroundColor = "rgba(10, 101, 160, 0.6)"; /// linea color prueba
+        buildingInfo.style.backgroundColor = "rgba(10, 101, 160, 0.6)"; /// linea color prueba
         estimateNumElv_div.addEventListener("change", function () {
             if (!allBuildingFieldsCompleted(buildingType)) {
                 return;
@@ -219,5 +234,35 @@ buildingType_select.addEventListener("change", function () {
                 updatePricingDisplay();
             }
         });
+    }
+        else if (buildingType == "commercial") {
+            displayBuildingFields(buildingType);
+            productLineInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; /// linea color prueba
+            pricingblock.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; /// linea color prueba
+            buildingInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; /// linea color prueba
+            estimateNumElv_div.addEventListener("change", function () {
+                if (!allBuildingFieldsCompleted(buildingType)) {
+                    return;
+                } else {
+                    displayElvCalcResult(buildingType);
+                    updatePricingDisplay();
+                }
+            });
+        }
+        else if (buildingType == "industrial") {
+            
+            productLineInfo.style.backgroundColor = ""; /// linea color prueba
+            pricingblock.style.backgroundColor = ""; /// linea color prueba
+            buildingInfo.style.backgroundColor = ""; /// linea color prueba
+            displayBuildingFields(buildingType);
+            estimateNumElv_div.addEventListener("change", function () {
+                if (!allBuildingFieldsCompleted(buildingType)) {
+                    return;
+                } else {
+                    displayElvCalcResult(buildingType);
+                    updatePricingDisplay();
+                }
+            });
+        }
     }
 });

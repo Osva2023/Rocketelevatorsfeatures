@@ -312,7 +312,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: #121212;
+    color: #0a65a0;
 }
 h1 a:hover,
 h2 a:hover,
@@ -5700,7 +5700,7 @@ ul.list-unstyled .dropdown-toggle::after {
 }
 .card-default > .card-heading {
     color: #333;
-    background-color: #f8f9fa;
+    background-color: #f3f5f7;
     border-color: #ddd;
 }
 .card-default > .card-footer {
