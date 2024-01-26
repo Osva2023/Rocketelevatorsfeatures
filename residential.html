@@ -456,16 +456,26 @@
 				</div>
 
 				<div class="card-block" id="dynamic-table-agents">
-					<table class="table" >
+					<table class="table table-striped" >
 						<thead>
 							<tr>
-								<th>First Name</th>
-								<th>Last Name</th>
+								<th id="first-name-header">First Name</th>
+								<!-- <th style="width: 2px;"></th> -->
+								<th id="last-name-header">Last Name</th>
+								<!-- <th style="width: 2px;"></th> -->
 								<th>Email</th>
-								<th>Region</th>
+								<th>
+									<label for="region">Region</label>
+								    <select id="region" onchange="filterByRegion()">
+										<option value="all">All</option>
+										<option value="east">East</option>
+										<option value="west">West</option>
+										<option value="south">South</option>
+										<option value="north">North</option>
+									</select>
+								</th>
 								<th>Rating</th>
-								<th>Fee</th>
-								
+								<th>Fee</th>	
 							</tr>
 						</thead>
 						<tbody id="table-body">
