@@ -68,10 +68,10 @@ const installPercentFees = {
     premium: 15,
     excelium: 20,
 };
-// new variable for object STEP 1 block building information
-//let buildingtab = document.querySelector(".card-title h3"); // add element to get the tabs step 1 BIEN SELECCIONADO
-let buildingInfo = document.getElementById("buildingInfo");  // nada seleccionado
-let productLineInfo = document.getElementById("product-line"); // add element to get the tabs step 3 BIEN SELECCIONADO
+
+let buildingtab = document.querySelector("#building-type-form"); 
+let buildingInfo = document.getElementById("buildingInfo");  
+let productLineInfo = document.getElementById("product-line"); 
 let pricingblock = document.getElementById('pricing-block');
 
 // CALCULATIONS
@@ -206,21 +206,24 @@ function allBuildingFieldsCompleted(buildingType) {
     }
     return true;
 }
-// function setcolorResidential(){
-//     buildingInfo.style.backgroundColor = "rgba(10, 101, 160,0.6";
-//     productLineInfo.style.backgroundColor = "rgba(10, 101, 160,0.6";
-//     pricingblock.style.backgroundColor = "rgba(10, 101, 160,0.6";
-// }
-// function setcolorCommercial(){
-//     buildingInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)";
-//     productLineInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)";
-//     pricingblock.style.backgroundColor = "rgba(169, 69, 69, 0.7)";
-// }
-// function setcolorIndustrial(){
-//     buildingInfo.style.backgroundColor = "rgba(211, 211, 211, 0.5)";
-//     productLineInfo.style.backgroundColor = "rgba(211, 211, 211, 0.5)";
-//     pricingblock.style.backgroundColor = "rgba(211, 211, 211, 0.5)";
-// }
+function setcolorResidential(){
+    buildingtab.style.backgroundColor = "rgba(10, 101, 160,0.6"; 
+    productLineInfo.style.backgroundColor = "rgba(10, 101, 160,0.6"; 
+    pricingblock.style.backgroundColor = "rgba(10, 101, 160, 0.6)"; 
+    buildingInfo.style.backgroundColor = "rgba(10, 101, 160, 0.6)"; 
+}
+function setcolorCommercial(){
+    buildingtab.style.backgroundColor = "rgba(169, 69, 69, 0.7)";
+    productLineInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; 
+    pricingblock.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; 
+    buildingInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; 
+}
+function setcolorIndustrial(){
+       buildingtab.style.backgroundColor = "rgba(211, 211, 211, 0.8)";
+       productLineInfo.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; 
+       pricingblock.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; 
+       buildingInfo.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; 
+}
 
 radioBtns_div.querySelectorAll("input[type='radio']").forEach((radioBtn) => {
     radioBtn.addEventListener("click", updatePricingDisplay);
@@ -237,11 +240,8 @@ buildingType_select.addEventListener("change", function () {
     else {
         
         if (buildingType == "residential") {
+        setcolorResidential();
         displayBuildingFields(buildingType);
-        
-        productLineInfo.style.backgroundColor = "rgba(10, 101, 160,0.6"; /// linea color prueba
-        pricingblock.style.backgroundColor = "rgba(10, 101, 160, 0.6)"; /// linea color prueba
-        buildingInfo.style.backgroundColor = "rgba(10, 101, 160, 0.6)"; /// linea color prueba
         estimateNumElv_div.addEventListener("change", function () {
             if (!allBuildingFieldsCompleted(buildingType)) {
                 return;
@@ -252,10 +252,12 @@ buildingType_select.addEventListener("change", function () {
         });
     }
         else if (buildingType == "commercial") {
+            setcolorCommercial();
             displayBuildingFields(buildingType);
-            productLineInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; /// linea color prueba
-            pricingblock.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; /// linea color prueba
-            buildingInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; /// linea color prueba
+            // buildingtab.style.backgroundColor = "rgba(169, 69, 69, 0.7)";
+            // productLineInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; /// linea color prueba
+            // pricingblock.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; /// linea color prueba
+            // buildingInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; /// linea color prueba
             estimateNumElv_div.addEventListener("change", function () {
                 if (!allBuildingFieldsCompleted(buildingType)) {
                     return;
@@ -267,9 +269,11 @@ buildingType_select.addEventListener("change", function () {
         }
         else if (buildingType == "industrial") {
             
-            productLineInfo.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; /// linea color prueba
-            pricingblock.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; /// linea color prueba
-            buildingInfo.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; /// linea color prueba
+            setcolorIndustrial();
+            // buildingtab.style.backgroundColor = "rgba(211, 211, 211, 0.8)";
+            // productLineInfo.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; /// linea color prueba
+            // pricingblock.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; /// linea color prueba
+            // buildingInfo.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; /// linea color prueba
             displayBuildingFields(buildingType);
             estimateNumElv_div.addEventListener("change", function () {
                 if (!allBuildingFieldsCompleted(buildingType)) {
