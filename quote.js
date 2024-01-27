@@ -1,5 +1,5 @@
 "use strict";
-
+// VARIABLES
 let buildingType_select = document.getElementById("building-type");
 let buildingType =
     buildingType_select.options[buildingType_select.selectedIndex].value;
@@ -91,7 +91,7 @@ function calcInstallFee(totalPrice, installPercentFee) {
 }
 
 // DISPLAY
-function resetForm() {
+function resetForm() { // FUNCTION TO RESET THE FORM
     estimateNumElv_div.style.display = "none";
     estimateNumElv_div.querySelectorAll("div").forEach((el) => {
         el.querySelectorAll("input[type='number']").forEach((input) => {
@@ -118,7 +118,7 @@ function resetForm() {
         });
 }
 
-function displayBuildingFields(buildingType) {
+function displayBuildingFields(buildingType) { // FUNCTION TO DISPLAY THE FIELD OF THE BUILDING TYPE
     
     estimateNumElv_div.style.display = "block";
     estimateNumElv_div.querySelector(".step-description").style.display =
@@ -137,7 +137,7 @@ function displayBuildingFields(buildingType) {
     
 }
 
-function displayElvCalcResult(buildingType) {
+function displayElvCalcResult(buildingType) { // FUNCTION TO DISPLAY THE RESULT OF THE CALCULATION
     let calculatedElv;
     if (buildingType == "commercial") {
         calculatedElv = calcCommercialElev(
@@ -157,7 +157,7 @@ function displayElvCalcResult(buildingType) {
     }
 }
 
-function displayPricing(productLine, numElv) {
+function displayPricing(productLine, numElv) { // FUNCTION TO DISPLAY THE PRICING
     let unitPrice = unitPrices[productLine];
     let installPercentFee = installPercentFees[productLine];
     let subtotal = unitPrice * numElv;
@@ -178,7 +178,7 @@ function displayPricing(productLine, numElv) {
     );
 }
 
-function updatePricingDisplay() {
+function updatePricingDisplay() { // FUNCTION TO UPDATE THE PRICING DISPLAY
     if (!displayCalcElv_input.value) {
         warning_p.style.display = "block";
         this.checked = false;
@@ -195,7 +195,7 @@ function updatePricingDisplay() {
     }
 }
 
-function allBuildingFieldsCompleted(buildingType) {
+function allBuildingFieldsCompleted(buildingType) { // FUNCTION TO CHECK IF ALL THE FIELDS ARE COMPLETED
     for (let fieldID of buildingTypeFields[buildingType]) {
         if (
             estimateNumElv_div.querySelector(`div[id='${fieldID}'] input`)
@@ -206,25 +206,26 @@ function allBuildingFieldsCompleted(buildingType) {
     }
     return true;
 }
-function setcolorResidential(){
+function setcolorResidential(){ // FUNCTION TO SET THE COLOR OF TABS IN CASE OF CHOOSE THE RESIDENTIAL BUILDING
     buildingtab.style.backgroundColor = "rgba(10, 101, 160,0.6"; 
     productLineInfo.style.backgroundColor = "rgba(10, 101, 160,0.6"; 
     pricingblock.style.backgroundColor = "rgba(10, 101, 160, 0.6)"; 
     buildingInfo.style.backgroundColor = "rgba(10, 101, 160, 0.6)"; 
 }
-function setcolorCommercial(){
+function setcolorCommercial(){ // FUNCTION TO SET THE COLOR OF TABS IN CASE OF CHOOSE THE COMMERCIAL BUILDING
     buildingtab.style.backgroundColor = "rgba(169, 69, 69, 0.7)";
     productLineInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; 
     pricingblock.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; 
     buildingInfo.style.backgroundColor = "rgba(169, 69, 69, 0.7)"; 
 }
-function setcolorIndustrial(){
+function setcolorIndustrial(){ // FUNCTION TO SET THE COLOR OF TABS IN CASE OF CHOOSE THE INDUSTRIAL BUILDING
        buildingtab.style.backgroundColor = "rgba(211, 211, 211, 0.8)";
        productLineInfo.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; 
        pricingblock.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; 
        buildingInfo.style.backgroundColor = "rgba(211, 211, 211, 0.8)"; 
 }
 
+// ACTIONS
 radioBtns_div.querySelectorAll("input[type='radio']").forEach((radioBtn) => {
     radioBtn.addEventListener("click", updatePricingDisplay);
 });

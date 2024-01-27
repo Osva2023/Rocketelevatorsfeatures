@@ -471,14 +471,18 @@
 					<table class="table table-striped" >
 						<thead>
 							<tr>
-								<th id="first-name-header">First Name</th>
-								<!-- <th style="width: 2px;"></th> -->
-								<th id="last-name-header">Last Name</th>
-								<!-- <th style="width: 2px;"></th> -->
-								<th>Email</th>
-								<th>
-									<label for="region">Region</label>
-								    <select id="region" onchange="filterByRegion()">
+								<th id="first-name-header" class="clickable-cell">
+									First Name <span class="clickable-icon">&#x25B2;</span>  
+								</th>
+								
+								<th id="last-name-header" class="clickable-cell">
+									Last Name <span class="clickable-icon">&#x25B2</span>  
+								 </th>
+								
+								<th id="email-header" class="table-header">Email</th>
+								<th id="region-cell">
+									<label for="region" id="region-label" class="table-header">Region</label>
+								    <select id="region" class="table-header" onchange=filterByRegion()>
 										<option value="all">All</option>
 										<option value="east">East</option>
 										<option value="west">West</option>
@@ -486,8 +490,8 @@
 										<option value="north">North</option>
 									</select>
 								</th>
-								<th>Rating</th>
-								<th>Fee</th>	
+								<th id="rating-header" class="table-header">Rating</th>
+								<th id="fee-header" class="table-header">Fee</th>	
 							</tr>
 						</thead>
 						<tbody id="table-body">

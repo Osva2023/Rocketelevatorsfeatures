@@ -1,3 +1,6 @@
+// LOGIC FOR SET THE POST REQUEST TO THE API WITH THE FORM DATA
+
+// Event listener for the form submit
 document
   .getElementById("contact-form")
   .addEventListener("submit", function (event) {
@@ -23,7 +26,7 @@ document
       file: null,
     };
 
-    fetch("http://99.79.77.144:3000/api/contact", {
+    fetch("http://99.79.77.144:3000/api/contact", { // FETCH REQUEST TO THE API
       method: "POST",
       body: JSON.stringify(formData),
 
@@ -46,8 +49,8 @@ document
         }
         return response.json();
       })
-      .then((json) => {
-        document.getElementById("succes-content").innerHTML = "Thanks, " + mainname + ", for contacting Rocketelevators. Your inquiry is our top priority and we will get back to you shortly";
+      .then((json) => { // DISPLAY THE DATA IN SUCCES MESSAGE
+        document.getElementById("succes-content").innerHTML = (JSON.stringify(json));
         
       })
       .catch((error) => {

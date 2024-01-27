@@ -7654,7 +7654,7 @@ div.ls-thumbnail-slide-container {
     font-size: 30px;
     line-height: 20px;
     margin: 0;
-    color: #111;
+    color: #0a65a0;
 }
 
 #portfolio .portfolio-item h2,
@@ -9926,8 +9926,41 @@ footer.sticky {
 }
 .special-day {
     color: #A94545;
-    font-weight: bold; /* Para hacerlo en negrita */
-    font-size: 1.0em; /* Ajusta el tamaño según lo necesites */
-    /* Otros estilos que desees aplicar */
+    font-weight: bold; 
 }
-
+.clickable-cell {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .clickable-icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    color:#0a65a0;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  
+  .clickable-cell:hover .clickable-icon {
+    opacity: 1;
+  }
+  .table-header  {
+    color: #A94545; 
+    font-size: 1.2em; 
+    font-family: 'Roboto Serif', serif; 
+  }
+  #region-cell {
+    display: flex;
+    align-items: center;
+    }
+  #region-label {
+    margin-right: 10px;
+    }
+    
+  .clickable-cell {
+  color: #A94545; 
+  font-size: 1.2em; 
+  font-family: 'Roboto Serif', serif; 
+  }
