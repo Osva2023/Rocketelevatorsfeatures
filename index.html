@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+	
 	<head>
 		<meta charset="utf-8" />
 		<link rel="shortcut icon" type="image/png" href="assets/images/rocketElevators/icon.png">
@@ -13,7 +14,7 @@
 
 		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
-		<link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+		<link href="assets/plugins/r.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
 		<link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
 
 		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
@@ -21,27 +22,32 @@
 
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+		<<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital@1&family=Roboto+Serif:opsz@8..144&family=Roboto+Slab&display=swap" rel="stylesheet">   
 	</head>
-
+   
 	<body class="smoothscroll enable-animation">
-
+        // <!-- Google Tag Manager (noscript) -->
 		<div id="wrapper">
 
             <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 				<header id="topNav">
 					<div class="container">
-
+                         <!-- Hamburger menu button -->
 						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
 							<i class="fa fa-bars"></i>
 						</button>
-
+                        <!-- Logo of the website, clicking on it will scroll to the top of the page -->
 						<a class="logo float-left scrollTo" href="#top">
 							<img src="assets/images/rocketElevators/rocketLogo.png" alt="" />
 						</a>
+						<!-- Navigation bar -->
 						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
 							<nav class="nav-main">
-
+                                  <!-- Unordered list for the main navigation links -->
 								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<!-- Home link, set as active -->
 									<li class="active">
 										<a id="home-nav" class="scrollTo" href="#top">
 											HOME
@@ -95,7 +101,7 @@
 
 			</div>
 
-
+            <!-- Slider section -->
 			<div class="slider fullwidthbanner-container roundedcorners">
 				<div class="fullwidthbanner" data-height="600" data-shadow="0" data-navigationStyle="preview2">
 					<ul class="hide">
@@ -271,7 +277,9 @@
 			</div>
 			
 			<hr class="m-0" />
+            <!-- End of slider section -->
 
+			<!--SERVICES-->
 			<section id="services">
 				<div class="container">
 					<div class="row">
@@ -303,19 +311,26 @@
 					</div>
 				</div>
 			</section>
+			<!--END OF SERVICES-->
 
+			<!-- DATA FOUNDATION-->
 			<section class="parallax parallax-1" style="background-image: url('assets/images/rocketElevators/businessSince.jpeg');">
 				<div class="overlay dark-7"></div>
 				<div class="container">
 					<div class="text-center">
-						<h2 class="fs-40 fw-300"><strong>Elevating Innovation, Safety, & Style since 1976</strong></h2>
+						<h2 class="fs-40 fw-300"><strong>Elevating Innovation, Safety, & Style since
+							<span style="color: #A94545; font-weight: bold; font-size: 1.2em;">1976</span>
+						</strong>
+					    </h2>
 						<a class="btn btn-outline-primary btn-lg" href="quote.html">REQUEST QUOTE <i class="fa fa-angle-right"></i></a> 
 						&nbsp; OR &nbsp; 
 						<a class="btn btn-outline-danger btn-lg" href="#contact">CONTACT US <i class="fa fa-angle-right"></i></a>
 					</div>
 				</div>
 			</section>
+			<!-- END OF DATA FOUNDATION-->
 
+			<!--PORTFOLIO SECTION-->	
 			<section id="portfolio">
 				<div class="container">
 					<div class="heading-title heading-dotted text-center">
@@ -331,8 +346,8 @@
 					</div>
 				</div>
 				<div class="container">
-					<div id="portfolio" class="portfolio-nogutter">
-						<div class="row mix-grid">
+					<div id="portfolio" class="portfolio-nogutte px-4">
+						<div class="row gx-5">
 
 							<div class="col-md-3 col-sm-3 mix commercial">
 								<div class="item-box">
@@ -537,7 +552,9 @@
 					</div>
 				</div>
 			</section>
+            <!--END OF PORTFOLIO SECTION-->
 
+			<!--CEO AND WORKER SECTION-->
 			<section id="team" class="section-xs dark">
 				<div class="container">
 					<div class="owl-carousel text-center owl-testimonial m-0" data-plugin-options='{"singleItem": true, "autoPlay": 3500, "navigation": false, "pagination": true, "transitionStyle":"fade"}'>
@@ -570,7 +587,8 @@
 					</div>
 				</div>
 			</section>
-
+			<!--END OF CEO AND WORKER SECTION-->
+            <!--NEWS SECTION-->
 			<section id="news">
 				<div class="container">
 
@@ -673,7 +691,9 @@
 					</div>
 				</div>
 			</section>
+			<!--END OF NEWS SECTION-->
 
+			<!--CLIENTS SECTION-->
 			<section id="clients" class="alternate">
 				<div class="container">
 					<div class="heading-title heading-dotted text-center">
@@ -745,7 +765,9 @@
 
 				</div>
 			</section>
+			<!--END OF CLIENTS SECTION-->
 
+			<!--CONTACT FORM-->
 			<section id="contact">
 				<div class="container">
 					<div class="row">
@@ -779,35 +801,35 @@
 									<div class="row">
 											<div class="col-md-4">
 												<label for="name">Full Name</label>
-												<input id="name" type="text" value="" class="form-control" name="contact[name]">
+												<input id="name" type="text" value="" class="form-control" name="contact[name]"required>
 											</div>
 											<div class="col-md-4">
 												<label for="email">E-mail Address</label>
-												<input id="email" type="email" value="" class="form-control" name="contact[email]">
+												<input id="email" type="email" value="" class="form-control" name="contact[email]" required>
 											</div>
 											<div class="col-md-4">
 												<label for="phone">Phone</label>
-												<input id="phone" type="text" value="" class="form-control" name="contact[phone]">
+												<input id="phone" type="text" value="" class="form-control" name="contact[phone]" required>
 											</div>
 									</div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <label for="company_name">Company Name</label>
-                                            <input id="name"  type="text" value="" class="form-control" name="contact[name]">
+                                            <label for="company-name">Company Name</label>
+                                            <input id="company-name"  type="text" value="" class="form-control" name="contact[name]" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label for="project_name">Project Name</label>
-                                            <input id="project_name"  type="text" value="" class="form-control" name="contact[name]">
+                                            <label for="project-name">Project Name</label>
+                                            <input id="project-name"  type="text" value="" class="form-control" name="contact[name]" required>
                                         </div>
                                     </div>
 									<div class="row">
 											<div class="col-md-6">
-                                                <label for="project_description">Project Description</label>
-												<input id="project_description"  type="text" value="" class="form-control" name="contact[subject]">
+                                                <label for="project-description">Project Description</label>
+												<input id="project-description"  type="text" value="" class="form-control" name="contact[subject]" required>
 											</div>
 											<div class="col-md-6">
 												<label for="department">Department</label>
-												<select id="department" class="form-control pointer" name="contact[department]">
+												<select id="department" class="form-control pointer" name="contact[department]" required>
 													<option value="">--- Select ---</option>
 													<option value="Marketing">Commercial</option>
 													<option value="Webdesign">Residential</option>
@@ -817,13 +839,13 @@
 									<div class="row">
 											<div class="col-md-12">
 												<label for="message">Message</label>
-												<textarea id="message"  maxlength="10000" rows="8" class="form-control" name="contact[message]"></textarea>
+												<textarea id="message"  maxlength="10000" rows="8" class="form-control" name="contact[message]" required></textarea>
 											</div>
 									</div>
 									<div class="row">
 											<div class="col-md-12">
 												<label for="attachment">File Attachment</label>
-												<input id="attachment" class="custom-file-upload" type="file" name="contact[attachment]"  data-btn-text="Select a File" />
+												<input id="attachment" class="custom-file-upload" type="file" name="contact[attachment]"  accept="image/*" data-btn-text="Select a File" />
 												<small class="text-muted block">
                                                     Max file size: 10Mb (zip/pdf/jpg/png)
                                                 </small>
@@ -865,7 +887,7 @@
 										<li>Wednesday: 9:00 - 17:00</li>
 										<li>Thursday: 9:00 - 17:00</li>
 										<li>Friday: 9:00 - 17:00</li>
-										<li>Saturday: 12:00 - 17:00</li>
+										<li class="special-day">Saturday: 12:00 - 17:00</li>
 									</ul>
 								</span>
 							</p>
@@ -873,7 +895,9 @@
 					</div>
 				</div>
 			</section>
+			<!--END OF CONTACT FORM-->
 
+            <!--SUCESS MESSAGE-->
 			<div class="modal fade" id="success-message" role="dialog">
 				<div class="modal-dialog">				
 				<div class="modal-content">
@@ -884,7 +908,7 @@
 						MESSAGE SENT!
 					</h3>
 					</div>
-					<div class="modal-body">
+					<div class="modal-body" id="succes-content">
 						<h4 style="text-align: center;">
 							Thank you for contacting Rocket Elevators. <br> 
 							Your inquiry is our top priority and <br> 
@@ -900,7 +924,8 @@
 				
 				</div>
 			</div>
-
+			<!--END OF SUCESS MESSAGE-->
+			<!--SUBSCRIBE MESSAGE-->
 			<div class="modal fade" id="subscribe-message" role="dialog">
 				<div class="modal-dialog">				
 				<div class="modal-content">
@@ -922,7 +947,8 @@
 				
 				</div>
 			</div>
-
+			<!--END OF SUBSCRIBE MESSAGE-->
+			<!--FOOTER-->
 			<footer id="footer">
 				<div class="container">
 					<div class="row">
@@ -963,8 +989,10 @@
 					</div>
 				</div>
 			</footer>
+			<!--END OF FOOTER-->
 		</div>
-
+		<!--END OF PAGE WRAPPER-->
+		<!--SCRIPT-->
 		<a href="#" id="toTop"></a>
 
 		<div id="preloader">
@@ -982,6 +1010,7 @@
 		<script src="assets/js/view/demo.revolution_slider.js"></script>
 
 		<script src="assets/js/contact.js"></script>
+		<script src="./index.js"></script>
 
 		<script type="text/javascript">
 			$("#contact-form").on("submit", function(e){
@@ -995,5 +1024,7 @@
 				this.reset();
 			});
 		</script>
+		<!--END OF SCRIPT-->
 	</body>
+	<!--END OF BODY-->
 </html>

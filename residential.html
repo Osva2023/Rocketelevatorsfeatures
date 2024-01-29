@@ -27,6 +27,26 @@
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
 		<link href="assets/css/color_scheme/red.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
+		<!-- TABLE SCRIPTS -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link href="DataTables/datatables.min.css" rel="stylesheet">
+        <script src="DataTables/datatables.min.js"></script> -->
+        
+		<style>
+			#dynamic-table-agents {
+			  width: 75%; /* Ajusta el valor según tus necesidades */
+			  margin: auto; /* Centra el contenedor */
+			}
+			#pricing-block {
+			 width: 73%; /* Ajusta el valor según tus necesidades */
+			 margin: auto; /* Centra el contenedor */
+			 background-color: #a945459f;
+		   }
+		   
+		  </style>
+		
+
 	</head>
 
 	<body class="smoothscroll enable-animation">
@@ -302,7 +322,7 @@
 				</div>
 			</section>
 			<!-- /LAYER SLIDER -->
-
+            
 
 			<!-- BUSINESS MODEL -->
 			<section id="business-model">
@@ -439,8 +459,54 @@
 				</div>
 			</section>
 			<!-- /TESTIMONIAL -->
+		
+			<!--AGENTS-->
+			<div  class="final-pricing-display card card-default"  style="display: block;">
+				<div class="card-heading card-heading-transparent" id="pricing-block">
+					<h3><span style="color:rgb(10, 101, 160); font-weight:bolder">Top Rated Agents</h3>
+					
+				</div>
 
+				<div class="card-block" id="dynamic-table-agents">
+					<table class="table table-striped" >
+						<thead>
+							<tr>
+								<th id="first-name-header" class="clickable-cell">
+									First Name <span class="clickable-icon">&#x25B2;</span>  
+								</th>
+								
+								<th id="last-name-header" class="clickable-cell">
+									Last Name <span class="clickable-icon">&#x25B2</span>  
+								 </th>
+								
+								<th id="email-header" class="table-header">Email</th>
+								<th id="region-cell">
+									<label for="region" id="region-label" class="table-header">Region</label>
+								    <select id="region" class="table-header" onchange=filterByRegion()>
+										<option value="all">All</option>
+										<option value="east">East</option>
+										<option value="west">West</option>
+										<option value="south">South</option>
+										<option value="north">North</option>
+									</select>
+								</th>
+								<th id="rating-header" class="table-header">Rating</th>
+								<th id="fee-header" class="table-header">Fee</th>	
+							</tr>
+						</thead>
+						<tbody id="table-body">
+							<!-- Data will be dynamically added here -->
+						</tbody>
+					</table>
+				</div>
+				
+				
 
+		
+				</div>
+			</div>
+	   			<!--AGENTS-->
+            
 			<!-- MODAL -->
 			<div class="modal fade" id="subscribe-message" role="dialog">
 				<div class="modal-dialog">				
@@ -534,6 +600,7 @@
 
 		<!-- SCRIPT -->
 		<script src="assets/js/scripts.js"></script>
+		<script src="residential.js"></script>
 
 		<!-- OPEN MODALS SCRIPT -->
 		<script type="text/javascript">

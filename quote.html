@@ -24,9 +24,9 @@
 	</head>
 
 	<body class="smoothscroll enable-animation">
-
+        <!--WRAPPER-->
 		<div id="wrapper">
-
+            <!--TOP NAV BAR-->
 			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 				<header id="topNav">
 					<div class="container">
@@ -92,7 +92,9 @@
 				</header>
 
 			</div>
+			<!--END TOP NAV BAR-->	
 
+            <!--PAGE HEADER-->
 			<section class="page-header page-header-xs parallax parallax-3" style="background-image:url('assets/images/rocketElevators/imgpattern2.jpg')">
 				<div class="overlay dark-2"></div>
 				<div class="container">
@@ -103,7 +105,8 @@
 					</ol>
 				</div>
 			</section>
-
+			<!--END PAGE HEADER-->
+			
 			<section class="parallax parallax-2" style="background-image: url('assets/images/rocketElevators/businessSince.jpeg');">
 				<div class="overlay dark-7"></div>
 				<div class="container">
@@ -118,13 +121,13 @@
 					</div>
 				</div>
 			</section>
-
+           <!--QUOTE FORM-->
 			<section>
 				<div class="container">
 					<form class="validate" id="quote-form">
-
+                        <!--TYPE OF BUILDING-->
 						<div class="select-building-type card card-default">
-							<div class="card-heading card-heading-transparent">
+							<div class="card-heading card-heading-transparent" id="building-type-form">
 								<label for="building-type" class="card-title"> 
 									<h3>
 										<span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 1 |</span> Select Type of Building
@@ -140,10 +143,11 @@
 								</select>
 							</div>
 						</div>
-
+                        <!--END TYPE OF BUILDING-->
+						<!--BUILDING INFORMATION-->
 						<div class="estimate-num-elv card card-default"  style="display: none;"> 
 							
-							<div class="card-heading step-description">
+							<div class="card-heading step-description" id="buildingInfo" >
 								<h3>
 									<span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 2 |</span> Provide Building Information
 								</h3>
@@ -205,9 +209,10 @@
 							</div>
 														
 						</div>
-
+						<!--END BUILDING INFORMATION-->
+						<!--PRODUCT LINE-->
 						<div class="product-line card card-default" style="display: none;">
-							<div class="card-heading card-heading-transparent">
+							<div class="card-heading card-heading-transparent" id="product-line" >
 								<h3><span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 3 |</span> Select Product Line</h3>
 								<p style="margin-bottom: 0px;">* Excluding tax and offers (if applicable)</p>
 								<p style="color: rgb(170, 69, 69); display: none; margin-bottom: 0px;" id="warning">Complete Step 2 to Estimate Price</p> 
@@ -238,9 +243,10 @@
 								
 							</div>
 						</div>
-
-						<div class="final-pricing-display card card-default" style="display: none;">
-							<div class="card-heading card-heading-transparent">
+						<!--END PRODUCT LINE-->
+						<!--FINAL PRICING-->
+						<div class="final-pricing-display card card-default"  style="display: none;">
+							<div class="card-heading card-heading-transparent" id="pricing-block">
 								<h3><span style="color:rgb(10, 101, 160); font-weight:bolder">STEP 4 |</span> Estimated Pricing</h3>
 								<p style="margin-bottom: 0px;">* Excluding tax and offers (if applicable)</p>
 								<p style="color: rgb(170, 69, 69); display: none; margin-bottom: 0px;" id="warning">Complete Step 2 to Estimate Price</p> 
@@ -303,11 +309,12 @@
 					
 							</div>
 						</div>
-						
+						<!--END FINAL PRICING-->
 					</form>
 				</div>
 			</section>
-
+			<!--END QUOTE FORM-->
+            <!--SUBSCRIBED MESSAGE-->
 			<div class="modal fade" id="subscribe-message" role="dialog">
 				<div class="modal-dialog">				
 				<div class="modal-content">
@@ -329,7 +336,8 @@
 				
 				</div>
 			</div>
-
+			<!--END SUBSCRIBED MESSAGE-->
+			<!--FOOTER-->
 			<footer id="footer">
 				<div class="container">
 					<div class="row">
@@ -370,8 +378,10 @@
 					</div>
 				</div>
 			</footer>
+			<!--END FOOTER-->
 		</div>
-
+		<!--END WRAPPER-->
+		<!--SCROLL TOP-->
 		<a href="#" id="toTop"></a>
 
 		<div id="preloader">
@@ -379,7 +389,8 @@
 				<span class="loader"></span>
 			</div>
 		</div>
-
+        <!--END SCROLL TOP-->
+		<!--Libraries-->
 		<script>var plugin_path = 'assets/plugins/';</script>
 		<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
@@ -389,7 +400,7 @@
 		<script src="assets/js/view/demo.revolution_slider.js"></script>
 
 		<script src="assets/js/contact.js"></script>
-    <script src="quote.js"></script>
+        <script src="quote.js"></script>
 
 		<script type="text/javascript">
 			$("#subscribe-form").on("submit", function(e){
@@ -398,6 +409,7 @@
 				this.reset();
 			});
 		</script>
-
+        <!--END Libraries-->
 	</body>
+	<!--END BODY-->
 </html>
